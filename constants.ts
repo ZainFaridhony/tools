@@ -1,0 +1,131 @@
+import { Tool } from './types';
+
+export const TOOLS: Tool[] = [
+  // AI Suite
+  {
+    id: 'ai-chat',
+    name: 'AI Chatbot',
+    description: 'Ask me anything! Powered by Gemini 3 Pro.',
+    icon: 'smart_toy',
+    color: 'bg-retro-yellow dark:bg-retro-deepPurple',
+    category: 'AI Power Suite',
+  },
+  {
+    id: 'ai-image',
+    name: 'Image Generator',
+    description: 'Create art from text with Imagen 4.',
+    icon: 'palette',
+    color: 'bg-retro-pink dark:bg-retro-hotPink',
+    category: 'AI Power Suite',
+  },
+  {
+    id: 'img-caption',
+    name: 'Caption Gen',
+    description: 'Generate captions for your photos.',
+    icon: 'subtitles',
+    color: 'bg-indigo-200 dark:bg-indigo-800',
+    category: 'AI Power Suite',
+  },
+
+  // Developer Tools
+  {
+    id: 'code-img',
+    name: 'Code Snap',
+    description: 'Beautiful code screenshots.',
+    icon: 'code',
+    color: 'bg-gray-300 dark:bg-gray-700',
+    category: 'Developer Tools',
+  },
+  {
+    id: 'css-loader',
+    name: 'CSS Loaders',
+    description: 'Generate pure CSS loading spinners.',
+    icon: 'autorenew',
+    color: 'bg-teal-200 dark:bg-teal-800',
+    category: 'Developer Tools',
+  },
+  {
+    id: 'clip-path',
+    name: 'Clip Path',
+    description: 'Visual CSS clip-path generator.',
+    icon: 'content_cut',
+    color: 'bg-lime-200 dark:bg-lime-800',
+    category: 'Developer Tools',
+  },
+  {
+    id: 'json-tree',
+    name: 'JSON Tree',
+    description: 'Visualizes JSON data in an interactive tree.',
+    icon: 'data_object',
+    color: 'bg-cyan-200 dark:bg-cyan-800',
+    category: 'Developer Tools',
+  },
+  {
+    id: 'rn-shadow',
+    name: 'RN Shadow',
+    description: 'React Native shadow generator.',
+    icon: 'layers',
+    color: 'bg-violet-200 dark:bg-violet-800',
+    category: 'Developer Tools',
+  },
+  {
+    id: 'html-enc',
+    name: 'HTML Encoder',
+    description: 'Encode or decode HTML entities.',
+    icon: 'code_off',
+    color: 'bg-red-200 dark:bg-red-800',
+    category: 'Developer Tools',
+  },
+
+  // Design & Social
+  {
+    id: 'palette-gen',
+    name: 'Palette Gen',
+    description: 'Extract color palettes from images.',
+    icon: 'colorize',
+    color: 'bg-green-200 dark:bg-green-800',
+    category: 'Design & Social',
+  },
+  {
+    id: 'tweet-img',
+    name: 'Tweet to Image',
+    description: 'Turn tweets into shareable images.',
+    icon: 'image',
+    color: 'bg-sky-200 dark:bg-sky-800',
+    category: 'Design & Social',
+  },
+  {
+    id: 'insta-post',
+    name: 'Insta Maker',
+    description: 'Create engaging Instagram posts.',
+    icon: 'camera_alt',
+    color: 'bg-rose-200 dark:bg-rose-800',
+    category: 'Design & Social',
+  },
+
+  // Utilities
+  {
+    id: 'pdf-scan',
+    name: 'PDF Scanner',
+    description: 'Convert images to PDF documents.',
+    icon: 'picture_as_pdf',
+    color: 'bg-blue-200 dark:bg-blue-800',
+    category: 'Utilities',
+  },
+  {
+    id: 'bionic-read',
+    name: 'Bionic Reader',
+    description: 'Read faster with highlighted text.',
+    icon: 'visibility',
+    color: 'bg-purple-200 dark:bg-purple-900',
+    category: 'Utilities',
+  },
+  {
+    id: 'text-hand',
+    name: 'Handwriter',
+    description: 'Convert typed text to handwriting.',
+    icon: 'edit_note',
+    color: 'bg-orange-200 dark:bg-orange-800',
+    category: 'Utilities',
+  },
+];

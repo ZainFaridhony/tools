@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RetroFunk OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Archivo Black"', 'sans-serif'],
+              mono: ['"Courier Prime"', 'monospace'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              retro: {
+                pink: '#FFC0CB',
+                yellow: '#FFD700',
+                purple: '#E6E6FA',
+                bg: '#FFFAFA',
+                dark: '#1a1a1a',
+                neonGreen: '#39FF14',
+                hotPink: '#FF69B4',
+                deepPurple: '#4B0082',
+              }
+            },
+            boxShadow: {
+              'hard': '4px 4px 0px 0px #000000',
+              'hard-sm': '2px 2px 0px 0px #000000',
+              'hard-lg': '8px 8px 0px 0px #000000',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar for that retro feel */
+      ::-webkit-scrollbar {
+        width: 12px;
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #fff;
+        border: 2px solid #000;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #39FF14;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-retro-bg dark:bg-retro-dark text-black dark:text-white transition-colors duration-200 min-h-screen">
+    <div id="root"></div>
+  </body>
+</html>
