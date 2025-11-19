@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Dashboard } from './views/Dashboard';
-import { ImageGenerator } from './views/ImageGenerator';
-import { ChatBot } from './views/ChatBot';
 import { PdfScanner } from './views/PdfScanner';
 import { PaletteGenerator } from './views/PaletteGenerator';
 import { TweetToImage } from './views/TweetToImage';
@@ -62,8 +60,6 @@ const App: React.FC = () => {
     if (!activeTool) return null;
 
     switch (activeTool.id) {
-      case 'ai-image': return <ImageGenerator />;
-      case 'ai-chat': return <ChatBot />;
       case 'pdf-scan': return <PdfScanner />;
       case 'palette-gen': return <PaletteGenerator />;
       case 'tweet-img': return <TweetToImage />;

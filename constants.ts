@@ -3,22 +3,6 @@ import { Tool } from './types';
 export const TOOLS: Tool[] = [
   // AI Suite
   {
-    id: 'ai-chat',
-    name: 'AI Chatbot',
-    description: 'Ask me anything! Powered by Gemini 3 Pro.',
-    icon: 'smart_toy',
-    color: 'bg-retro-yellow dark:bg-retro-deepPurple',
-    category: 'AI Power Suite',
-  },
-  {
-    id: 'ai-image',
-    name: 'Image Generator',
-    description: 'Create art from text with Imagen 4.',
-    icon: 'palette',
-    color: 'bg-retro-pink dark:bg-retro-hotPink',
-    category: 'AI Power Suite',
-  },
-  {
     id: 'img-caption',
     name: 'Caption Gen',
     description: 'Generate captions for your photos.',
