@@ -45,6 +45,14 @@ export const TOOLS: Tool[] = [
     category: 'Developer Tools',
   },
   {
+    id: 'css-min',
+    name: 'CSS Minifier',
+    description: 'Compress CSS code.',
+    icon: 'format_align_left',
+    color: 'bg-indigo-200 dark:bg-indigo-800',
+    category: 'Developer Tools',
+  },
+  {
     id: 'clip-path',
     name: 'Clip Path',
     description: 'Visual CSS clip-path generator.',
@@ -74,6 +82,22 @@ export const TOOLS: Tool[] = [
     description: 'Encode or decode HTML entities.',
     icon: 'code_off',
     color: 'bg-red-200 dark:bg-red-800',
+    category: 'Developer Tools',
+  },
+  {
+    id: 'js-fmt',
+    name: 'JS Formatter',
+    description: 'Beautify minified or messy JavaScript code.',
+    icon: 'code',
+    color: 'bg-yellow-200 dark:bg-yellow-800',
+    category: 'Developer Tools',
+  },
+  {
+    id: 'html-fmt',
+    name: 'HTML Formatter',
+    description: 'Beautify minified or messy HTML code.',
+    icon: 'format_align_justify',
+    color: 'bg-orange-200 dark:bg-orange-800',
     category: 'Developer Tools',
   },
 
@@ -126,6 +150,14 @@ export const TOOLS: Tool[] = [
     description: 'Convert typed text to handwriting.',
     icon: 'edit_note',
     color: 'bg-orange-200 dark:bg-orange-800',
+    category: 'Utilities',
+  },
+  {
+    id: 'url-enc',
+    name: 'URL Enc/Dec',
+    description: 'Encode or decode URL strings.',
+    icon: 'link_off',
+    color: 'bg-pink-200 dark:bg-pink-800',
     category: 'Utilities',
   },
   {

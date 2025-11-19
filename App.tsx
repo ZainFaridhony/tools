@@ -18,6 +18,10 @@ import { HtmlEncoderDecoder } from './views/HtmlEncoderDecoder';
 import { UrlSlugGenerator } from './views/UrlSlugGenerator';
 import { Base64EncoderDecoder } from './views/Base64EncoderDecoder';
 import { HtmlMinifier } from './views/HtmlMinifier';
+import { UrlEncoderDecoder } from './views/UrlEncoderDecoder';
+import { CssMinifier } from './views/CssMinifier';
+import { JavaScriptFormatter } from './views/JavaScriptFormatter';
+import { HtmlFormatter } from './views/HtmlFormatter';
 import { Tool } from './types';
 import { Card } from './components/Card';
 import { Button } from './components/Button';
@@ -76,6 +80,10 @@ const App: React.FC = () => {
       case 'url-slug': return <UrlSlugGenerator />;
       case 'base64-enc': return <Base64EncoderDecoder />;
       case 'html-min': return <HtmlMinifier />;
+      case 'url-enc': return <UrlEncoderDecoder />;
+      case 'css-min': return <CssMinifier />;
+      case 'js-fmt': return <JavaScriptFormatter />;
+      case 'html-fmt': return <HtmlFormatter />;
       default:
         return (
           <div className="flex flex-col items-center justify-center h-full text-center space-y-6 p-8">
