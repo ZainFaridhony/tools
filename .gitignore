@@ -1,3 +1,18 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Production
+dist
+dist-ssr
+build
+
+# Local Env Files
+.env
+.env.local
+.env.*.local
+*.local
+
 # Logs
 logs
 *.log
@@ -7,12 +22,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# TypeScript
+*.tsbuildinfo
 
-# Editor directories and files
+# Editor/IDE
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -22,3 +35,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# OS Generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+coverage
+
+# Deployment
+.vercel
+.netlify

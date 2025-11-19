@@ -128,4 +128,28 @@ export const TOOLS: Tool[] = [
     color: 'bg-orange-200 dark:bg-orange-800',
     category: 'Utilities',
   },
+  {
+    id: 'url-slug',
+    name: 'URL Slug Gen',
+    description: 'Generates SEO-friendly URL slugs from text.',
+    icon: 'link',
+    color: 'bg-emerald-200 dark:bg-emerald-800',
+    category: 'Utilities',
+  },
+  {
+    id: 'base64-enc',
+    name: 'Base64 Tool',
+    description: 'Encode or decode Base64 strings.',
+    icon: 'lock',
+    color: 'bg-amber-200 dark:bg-amber-800',
+    category: 'Utilities',
+  },
+  {
+    id: 'html-min',
+    name: 'HTML Minifier',
+    description: 'Compress HTML code for better load speed.',
+    icon: 'compress',
+    color: 'bg-fuchsia-200 dark:bg-fuchsia-800',
+    category: 'Utilities',
+  },
 ];
