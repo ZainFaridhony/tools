@@ -57,7 +57,7 @@ export const CaptionGenerator: React.FC = () => {
               GENERATE CAPTION
             </Button>
             <div className="flex-1 border-2 border-black bg-retro-yellow p-4 font-mono text-sm overflow-y-auto shadow-inner relative">
-              <div className="absolute top-0 right-0 bg-black text-white text-[10px] px-1">GEMINI_1.5_FLASH</div>
+              <div className="absolute top-0 right-0 bg-black text-white text-[10px] px-1">GEMINI_2.5_FLASH_LITE</div>
               {caption ? caption : "Awaiting generation..."}
             </div>
             <Button variant="secondary" onClick={() => navigator.clipboard.writeText(caption)} disabled={!caption}>

@@ -39,7 +39,7 @@ export const generateCaption = async (base64Image: string): Promise<string> => {
     const data = match[2];
 
     const response = await ai.models.generateContent({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-2.5-flash-lite',
       contents: {
         parts: [
           { inlineData: { mimeType, data } },
@@ -57,7 +57,7 @@ export const generateCaption = async (base64Image: string): Promise<string> => {
 
 export const createChatSession = () => {
   return ai.chats.create({
-    model: 'gemini-1.5-flash',
+    model: 'gemini-2.5-flash-lite',
     config: {
       systemInstruction: "You are a helpful, witty assistant living inside a retro 90s computer interface. Be concise, fun, and use occasional retro tech slang.",
     },
