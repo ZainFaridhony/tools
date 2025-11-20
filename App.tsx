@@ -20,6 +20,12 @@ import { UrlEncoderDecoder } from './views/UrlEncoderDecoder';
 import { CssMinifier } from './views/CssMinifier';
 import { JavaScriptFormatter } from './views/JavaScriptFormatter';
 import { HtmlFormatter } from './views/HtmlFormatter';
+import { CssGlassmorphismGenerator } from './views/CssGlassmorphismGenerator';
+import { ImageColorPicker } from './views/ImageColorPicker';
+import { YouTubeThumbnailGrabber } from './views/YouTubeThumbnailGrabber';
+import { CssGradientGenerator } from './views/CssGradientGenerator';
+import { ImageCropper } from './views/ImageCropper';
+import { TOOLS } from './constants';
 import { Tool } from './types';
 import { Card } from './components/Card';
 import { Button } from './components/Button';
@@ -60,26 +66,31 @@ const App: React.FC = () => {
     if (!activeTool) return null;
 
     switch (activeTool.id) {
-      case 'pdf-scan': return <PdfScanner />;
-      case 'palette-gen': return <PaletteGenerator />;
-      case 'tweet-img': return <TweetToImage />;
-      case 'bionic-read': return <BionicReader />;
-      case 'text-hand': return <Handwriter />;
-      case 'code-img': return <CodeSnap />;
-      case 'css-loader': return <CssLoaders />;
-      case 'img-caption': return <CaptionGenerator />;
-      case 'insta-post': return <InstaMaker />;
-      case 'clip-path': return <ClipPathGenerator />;
-      case 'json-tree': return <JsonTreeViewer />;
-      case 'rn-shadow': return <ReactNativeShadowGenerator />;
-      case 'html-enc': return <HtmlEncoderDecoder />;
-      case 'url-slug': return <UrlSlugGenerator />;
-      case 'base64-enc': return <Base64EncoderDecoder />;
-      case 'html-min': return <HtmlMinifier />;
-      case 'url-enc': return <UrlEncoderDecoder />;
-      case 'css-min': return <CssMinifier />;
-      case 'js-fmt': return <JavaScriptFormatter />;
-      case 'html-fmt': return <HtmlFormatter />;
+      case 'pdf-scan': return <PdfScanner tool={activeTool} />;
+      case 'palette-gen': return <PaletteGenerator tool={activeTool} />;
+      case 'tweet-img': return <TweetToImage tool={activeTool} />;
+      case 'bionic-read': return <BionicReader tool={activeTool} />;
+      case 'text-hand': return <Handwriter tool={activeTool} />;
+      case 'code-img': return <CodeSnap tool={activeTool} />;
+      case 'css-loader': return <CssLoaders tool={activeTool} />;
+      case 'img-caption': return <CaptionGenerator tool={activeTool} />;
+      case 'insta-post': return <InstaMaker tool={activeTool} />;
+      case 'clip-path': return <ClipPathGenerator tool={activeTool} />;
+      case 'json-tree': return <JsonTreeViewer tool={activeTool} />;
+      case 'rn-shadow': return <ReactNativeShadowGenerator tool={activeTool} />;
+      case 'html-enc': return <HtmlEncoderDecoder tool={activeTool} />;
+      case 'url-slug': return <UrlSlugGenerator tool={activeTool} />;
+      case 'base64-enc': return <Base64EncoderDecoder tool={activeTool} />;
+      case 'html-min': return <HtmlMinifier tool={activeTool} />;
+      case 'url-enc': return <UrlEncoderDecoder tool={activeTool} />;
+      case 'css-min': return <CssMinifier tool={activeTool} />;
+      case 'js-fmt': return <JavaScriptFormatter tool={activeTool} />;
+      case 'html-fmt': return <HtmlFormatter tool={activeTool} />;
+      case 'css-glass': return <CssGlassmorphismGenerator tool={activeTool} />;
+      case 'color-pick': return <ImageColorPicker tool={activeTool} />;
+      case 'yt-thumb': return <YouTubeThumbnailGrabber tool={activeTool} />;
+      case 'css-grad': return <CssGradientGenerator tool={activeTool} />;
+      case 'img-crop': return <ImageCropper tool={activeTool} />;
       default:
         return (
           <div className="flex flex-col items-center justify-center h-full text-center space-y-6 p-8">
@@ -141,7 +152,7 @@ const App: React.FC = () => {
         ) : (
           <>
             <div className="mb-8 text-center">
-              <h2 className="font-mono font-bold text-lg mb-2 inline-block bg-black text-white px-2 transition-colors duration-500">AVAILABLE_MODULES: {18}</h2>
+              <h2 className="font-mono font-bold text-lg mb-2 inline-block bg-black text-white px-2 transition-colors duration-500">AVAILABLE_MODULES: {TOOLS.length}</h2>
               <p className="font-sans text-gray-600 dark:text-gray-400 transition-colors duration-500">Select a tool to launch application window.</p>
             </div>
             <Dashboard onSelectTool={setActiveTool} />
